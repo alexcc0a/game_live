@@ -1,7 +1,7 @@
-#include <cstdlib>  // Для функций стандартной библиотеки C (например, rand)
-#include <iostream> // Для стандартного ввода/вывода (cin, cout)
-#include <stdlib.h> // Для функций стандартной библиотеки C (например, system)
-#include <unistd.h> // Для функций работы с системой (например, sleep)
+#include <cstdlib>
+#include <iostream>
+#include <stdlib.h>
+#include <unistd.h>
 
 void delete_map(char **map, int x);
 void generation(char **map, int x, int y, int &cells);
@@ -78,7 +78,7 @@ void live_point_next_move(char **map, char **temp_map, int x, int y, int row,
         }
     }
     if (temp_map[x][y] == '*' && (counter == 2 || counter == 3)) {
-        // ...
+        
     } else if (temp_map[x][y] == '*' && (counter < 2 || 3 < counter)) {
         map[x][y] = '-';
         cells -= 1;
