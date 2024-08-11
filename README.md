@@ -1,24 +1,24 @@
-## Упрощённая консольная реализация игры «Жизнь», придуманная английским математиком Джоном Конвеем в 1970 году.
+## A simplified console implementation of the game "Life", invented by the English mathematician John Conway in 1970.
 
-##Стандартная библиотека C++:
-#include <iostream>: Используется для работы с вводом и выводом (например, std::cin, std::cout).
-#include <cstdlib> и #include <stdlib.h>: Эти заголовочные файлы содержат функции стандартной библиотеки C, такие как rand() и system(). Хотя оба файла содержат аналогичные функции, cstdlib является частью C++ и рекомендуется для использования в C++ программах.
+# C++ Standard Library:
+#include <iostream>: Used to deal with input and output (eg std::cin, std::cout).
+#include <cstdlib> and #include <stdlib.h>: These header files contain C standard library functions such as rand() and system(). Although both files contain similar functions, cstdlib is part of C++ and is recommended for use in C++ programs.
 
-##Функции управления памятью:
-new и delete[]: Используются для динамического выделения и освобождения памяти под двумерные массивы (char** map), которые представляют игровую карту.
+# Memory management features:
+new and delete[]: Used to dynamically allocate and free memory for two-dimensional arrays (char** maps) that represent the game map.
 
-##Системные вызовы:
-#include <unistd.h>: Используется для вызовов системных функций, таких как sleep(), которые приостанавливают выполнение программы на заданное количество секунд.
+# System calls:
+#include <unistd.h>: Used for calls to system functions such as sleep() that pause program execution for a specified number of seconds.
 
-##Циклы и условные операторы:
-Циклы for и do-while используются для итераций по массивам и выполнения игровых шагов до тех пор, пока игра не завершится.
-Условные операторы if, else if, и else используются для проверки различных условий в ходе игры.
+# Loops and conditional statements:
+For and do-while loops are used to iterate through arrays and perform game steps until the game ends.
+Conditional statements if, else if, and else are used to test various conditions during the game.
 
-##Работа с двумерными массивами:
-Основные операции в игре выполняются на двумерных массивах, которые представляют игровую карту. Операции включают создание карты, копирование данных между картами, отображение карты на экране и изменения состояния клеток на карте.
+# Working with two-dimensional arrays:
+Basic operations in the game are performed on two-dimensional arrays that represent the game map. Operations include creating a map, copying data between maps, displaying the map on the screen, and changing the state of cells on the map.
 
-##Механизм "Игра жизни":
-Логика игры реализована на основе клеточного автомата "Игра жизни" (Conway's Game of Life), где клетки могут быть "живыми" (*) или "мертвыми" (-), и их состояние обновляется в зависимости от количества соседей.
+# "Game of Life" mechanism:
+The game logic is implemented based on the cellular automaton "Game of Life" (Conway's Game of Life), where cells can be "live" (*) or "dead" (-), and their state is updated depending on the number of neighbors.
 
-##Системные команды для очистки экрана:
-Используются последовательности escape-кодов \x1B[2J\x1B[H для очистки экрана в консоли, что позволяет обновлять отображение карты на экране при каждом шаге игры.
+# System commands for clearing the screen:
+Uses the \x1B[2J\x1B[H escape code sequences to clear the screen in the console, allowing the map display to be updated on screen with each step of the game.
